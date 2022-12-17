@@ -11,6 +11,8 @@ const bot = new TelegramBot(ACCESS_TOKEN, { polling: true });
 const startCommand = require('./commands/start');
 const helpCommand = require('./commands/help');
 const ratesCommand = require('./commands/rates');
+const notifyCommand = require('./commands/notify');
+const stopCommand = require('./commands/stop');
 
 // Handle the /start command
 bot.onText(/\/start/, (msg) => {
@@ -25,4 +27,14 @@ bot.onText(/\/help/, (msg) => {
 // Handle the /rates command
 bot.onText(/\/rates/, (msg) => {
     ratesCommand.execute(bot, msg);
+});
+
+// Handle the /notify command
+bot.onText(/\/notify/, (msg) => {
+    notifyCommand.execute(bot, msg);
+});
+
+// Handle the /stop command
+bot.onText(/\/stop/, (msg) => {
+    stopCommand.execute(bot, msg);
 });
