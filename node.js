@@ -2,7 +2,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 
 // Replace this with your node's access token
-const ACCESS_TOKEN = '5750247191:AAE7Qa5jhumeuYfZo8-xF1m-lIdiHgz6v10';
+const ACCESS_TOKEN = '';
 
 // Create a new node instance
 const node = new TelegramBot(ACCESS_TOKEN, { polling: true });
